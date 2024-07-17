@@ -1,0 +1,313 @@
+name: "global_dnn"
+platform: "tensorflow_savedmodel"
+backend: "tensorflow"
+runtime: ""
+version_policy: {
+    specific: {
+        versions: [
+            1
+        ]
+    }
+}
+max_batch_size: 8
+input: [
+    {
+        name: "A",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "B",
+        data_type: TYPE_STRING,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "C",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "D",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "E",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "F",
+        data_type: TYPE_STRING,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "G",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "H",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "I",
+        data_type: TYPE_STRING,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "J",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "K",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "L",
+        data_type: TYPE_STRING,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "M",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "N",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "O",
+        data_type: TYPE_STRING,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "P",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "Q",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "R",
+        data_type: TYPE_STRING,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "S",
+        data_type: TYPE_STRING,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "T",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "U",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "V",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    },
+    {
+        name: "W",
+        data_type: TYPE_FP32,
+        format: FORMAT_NONE,
+        dims: [
+            1
+        ],
+        is_shape_tensor: false,
+        allow_ragged_batch: false,
+        optional: false
+    }
+]
+output: [
+    {
+        name: "output",
+        data_type: TYPE_FP32,
+        dims: [
+            1
+        ],
+        label_filename: "",
+        is_shape_tensor: false
+    }
+]
+batch_input: []
+batch_output: []
+optimization: {
+    priority: PRIORITY_DEFAULT,
+    input_pinned_memory: {enable: true},
+    output_pinned_memory: {enable: true},
+    gather_kernel_buffer_threshold: 0,
+    eager_batching: false
+}
+dynamic_batching: {
+    preferred_batch_size: [8],
+    max_queue_delay_microseconds: 0,
+    preserve_ordering: false,
+    priority_levels: 0,
+    default_priority_level: 0,
+    priority_queue_policy: {}
+}
+instance_group: [
+    {
+        name: "cpa_global_dnn_0",
+        kind: KIND_CPU,
+        count: 3,
+        gpus: [],
+        secondary_devices: [],
+        profile: [],
+        passive: false,
+        host_policy: ""
+    }
+]
+default_model_filename: "model.savedmodel"
+cc_model_filenames: {}
+metric_tags: {}
+parameters: {}
+model_warmup: []
+model_operations: {}
