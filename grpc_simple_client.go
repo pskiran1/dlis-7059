@@ -7,6 +7,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"sync"
 	"time"
 
 	triton "github.com/triton-inference-server/client/src/grpc_generated/go/grpc-client"
@@ -140,15 +141,25 @@ func main() {
 	defer conn.Close()
 
 	client := triton.NewGRPCInferenceServiceClient(conn)
+	var wg sync.WaitGroup
+	numRequests := 10
+	wg.Add(numRequests)
 
-	inferResponse := ModelInferRequest(client, FLAGS.ModelName, FLAGS.ModelVersion)
+	for i := 0; i < numRequests; i++ {
+		go func() {
+			defer wg.Done()
+			inferResponse := ModelInferRequest(client, FLAGS.ModelName, FLAGS.ModelVersion)
 
-	outputBytes := inferResponse.RawOutputContents[0]
-	outputData := make([]float32, len(outputBytes)/4)
-	for i := range outputData {
-		outputData[i] = readFloat32(outputBytes[i*4 : (i+1)*4])
+			outputBytes := inferResponse.RawOutputContents[0]
+			outputData := make([]float32, len(outputBytes)/4)
+			for i := range outputData {
+				outputData[i] = readFloat32(outputBytes[i*4 : (i+1)*4])
+			}
+			fmt.Println("Output:", outputData)
+		}()
 	}
-	fmt.Println("Output:", outputData)
+
+	wg.Wait()
 }
 
 func readFloat32(fourBytes []byte) float32 {
